@@ -2,21 +2,21 @@
 
 A modern full-stack hostel booking website built using:
 
-## 🚀 Tech Stack
+##  Tech Stack
 - React + Vite
 - Tailwind CSS
 - Node.js
 - Express.js
 - MongoDB
 
-## ✨ Features
+##  Features
 - Responsive modern UI
 - Contact form with MongoDB storage
 - Admin dashboard to manage messages
 - Booking page
 - Protected admin login
 
-## 📦 Installation
+##  Installation
 
 ### Frontend
 cd urban-nest
@@ -28,5 +28,5 @@ cd backend
 npm install
 node server.js
 
-## 👨‍💻 Author
+##  Author
 PalAnghan
