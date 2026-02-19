@@ -24,7 +24,7 @@ export default function Admin() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:5000/contact/${id}`, {
+      await fetch(`https://hostel-website-1.onrender.com/contacts/${id}`, {
         method: "DELETE",
       });
 
