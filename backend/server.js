@@ -8,7 +8,7 @@ const Contact = require("./models/Contact");
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://autoagency:kZmKcA06NO88KLyS@autoagency.uxegkzo.mongodb.net/urbanNest")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
