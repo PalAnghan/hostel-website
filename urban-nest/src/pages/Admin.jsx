@@ -5,14 +5,15 @@ export default function Admin() {
   const [password, setPassword] = useState("");
   const [contacts, setContacts] = useState([]);
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      fetch("http://localhost:5000/contacts")
-        .then(res => res.json())
-        .then(data => setContacts(data))
-        .catch(err => console.log(err));
-    }
-  }, [isLoggedIn]);
+  const API_URL = import.meta.env.VITE_API_URL;
+
+useEffect(() => {
+  fetch(`${API_URL}/contacts`)
+    .then(res => res.json())
+    .then(data => setContacts(data))
+    .catch(err => console.error(err));
+}, []);
+
 
   const handleLogin = () => {
     if (password === "admin123") {
@@ -24,7 +25,7 @@ export default function Admin() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://hostel-website-1.onrender.com/contacts/${id}`, {
+      await fetch(`${API_URL}/contact/${id}`, {
         method: "DELETE",
       });
 
